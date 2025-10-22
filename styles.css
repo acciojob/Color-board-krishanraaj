@@ -1,23 +1,25 @@
 body {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #f0f0f0;
-  margin: 0;
-  font-family: sans-serif;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(40, 20px); /* 40 columns to make 800 squares (40 x 20 = 800) */
-  grid-gap: 2px;
+  grid-template-columns: repeat(40, 25px); /* 40 columns */
+  grid-template-rows: repeat(20, 25px);    /* 20 rows => 40*20 = 800 squares */
+  gap: 2px;
+  padding: 10px;
+  background-color: #ccc;
 }
 
 .square {
-  width: 20px;
-  height: 20px;
-  background-color: black;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
+  width: 25px;
+  height: 25px;
+  background-color: rgb(29, 29, 29); /* initial color as in test case */
+  transition: background-color 0.5s ease;
+  box-sizing: border-box;
 }

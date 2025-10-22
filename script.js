@@ -1,25 +1,24 @@
 const container = document.getElementById('container');
 
-// Generate 800 squares
+// Create 800 squares
 for (let i = 0; i < 800; i++) {
   const square = document.createElement('div');
   square.classList.add('square');
 
-  // Hover event
   square.addEventListener('mouseenter', () => {
     const color = getRandomColor();
     square.style.backgroundColor = color;
 
-    // Revert after 1 second
+    // Revert to default color after 1 second
     setTimeout(() => {
-      square.style.backgroundColor = '#fff';
+      square.style.backgroundColor = 'rgb(29, 29, 29)';
     }, 1000);
   });
 
   container.appendChild(square);
 }
 
-// Function to generate random color
+// Random color generator
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
