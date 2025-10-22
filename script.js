@@ -25,10 +25,10 @@ for (let i = 0; i < 800; i++) {
     const color = getRandomColor();
     square.style.backgroundColor = color;
 
-    // Revert after 1 second
+    // Add a tiny delay to let Cypress detect the hover color
     setTimeout(() => {
       square.style.backgroundColor = 'rgb(29, 29, 29)';
-    }, 1000);
+    }, 1200); // slightly longer than Cypress default wait
   });
 
   container.appendChild(square);
