@@ -5,6 +5,7 @@ for (let i = 0; i < 800; i++) {
   const square = document.createElement('div');
   square.classList.add('square');
 
+  // Hover effect
   square.addEventListener('mouseenter', () => {
     const color = getRandomColor();
     square.style.backgroundColor = color;
@@ -18,7 +19,7 @@ for (let i = 0; i < 800; i++) {
   container.appendChild(square);
 }
 
-// Function to generate random hex color
+// Function to generate random color
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';

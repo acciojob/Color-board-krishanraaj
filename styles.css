@@ -1,25 +1,25 @@
 body {
-  margin: 0;
+  background-color: #111;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background-color: #f0f0f0;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
   display: grid;
-  grid-template-columns: repeat(40, 25px); /* 40 columns */
-  grid-template-rows: repeat(20, 25px);    /* 20 rows = 800 squares */
+  grid-template-columns: repeat(40, 25px);
+  grid-template-rows: repeat(20, 25px);
   gap: 2px;
   padding: 10px;
 }
 
-
 .square {
   width: 25px;
   height: 25px;
-  background-color: rgb(29, 29, 29); /* Important: matches Cypress expectation */
+  background-color: rgb(29, 29, 29); /* Required for Cypress */
   transition: background-color 0.5s ease;
   box-sizing: border-box;
+  cursor: pointer;
 }
