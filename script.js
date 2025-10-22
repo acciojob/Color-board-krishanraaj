@@ -1,29 +1,31 @@
 const container = document.getElementById('container');
 
-// Set container size to hold 800 squares in grid
+// Set container as a grid
 container.style.display = 'grid';
 container.style.gridTemplateColumns = 'repeat(40, 25px)';
 container.style.gridTemplateRows = 'repeat(20, 25px)';
 container.style.gap = '2px';
-container.style.width = '1020px';  // 40*25 + gaps
-container.style.height = '520px';  // 20*25 + gaps
+container.style.width = '1020px';
+container.style.height = '520px';
 
 // Create 800 squares
 for (let i = 0; i < 800; i++) {
   const square = document.createElement('div');
   square.classList.add('square');
 
-  // Set initial color
+  // Initial style
   square.style.backgroundColor = 'rgb(29, 29, 29)';
   square.style.width = '25px';
   square.style.height = '25px';
-  square.style.transition = 'background-color 0.5s ease';
+  square.style.transition = 'background-color 0.3s ease';
 
   // Hover effect
   square.addEventListener('mouseenter', () => {
-    square.style.backgroundColor = getRandomColor();
+    // Change immediately
+    const color = getRandomColor();
+    square.style.backgroundColor = color;
 
-    // Revert back after 1 second
+    // Revert after 1 second
     setTimeout(() => {
       square.style.backgroundColor = 'rgb(29, 29, 29)';
     }, 1000);
@@ -32,7 +34,7 @@ for (let i = 0; i < 800; i++) {
   container.appendChild(square);
 }
 
-// Function to generate random color
+// Random color generator
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
