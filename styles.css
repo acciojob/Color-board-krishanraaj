@@ -10,16 +10,16 @@ body {
 .container {
   display: grid;
   grid-template-columns: repeat(40, 25px); /* 40 columns */
-  grid-template-rows: repeat(20, 25px);    /* 20 rows => 40*20 = 800 squares */
+  grid-template-rows: repeat(20, 25px);    /* 20 rows = 800 squares */
   gap: 2px;
   padding: 10px;
-  background-color: #ccc;
 }
+
 
 .square {
   width: 25px;
   height: 25px;
-  background-color: rgb(29, 29, 29); /* initial color as in test case */
+  background-color: rgb(29, 29, 29); /* Important: matches Cypress expectation */
   transition: background-color 0.5s ease;
   box-sizing: border-box;
 }

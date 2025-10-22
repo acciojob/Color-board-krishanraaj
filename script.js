@@ -9,7 +9,7 @@ for (let i = 0; i < 800; i++) {
     const color = getRandomColor();
     square.style.backgroundColor = color;
 
-    // Revert to default color after 1 second
+    // Revert back after 1 second
     setTimeout(() => {
       square.style.backgroundColor = 'rgb(29, 29, 29)';
     }, 1000);
@@ -18,7 +18,7 @@ for (let i = 0; i < 800; i++) {
   container.appendChild(square);
 }
 
-// Random color generator
+// Function to generate random hex color
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
