@@ -1,28 +1,31 @@
 body {
   background-color: #212121;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
 }
 
 /* Container grid */
 .container {
   display: grid;
-  grid-template-columns: repeat(40, 25px);
-  grid-template-rows: repeat(20, 25px);
-  gap: 1px;      /* smaller gap */
-  width: 1020px;
-  height: 520px;
-  margin: 20px auto;
+  grid-template-columns: repeat(40, 20px); /* 40 columns */
+  grid-template-rows: repeat(20, 20px);    /* 20 rows = 800 boxes */
+  gap: 1px;
+  width: 820px;
+  height: 420px;
+  margin: 0 auto;
 }
 
 /* Squares */
 .square {
-  width: 15px;
-  height: 15px;
-  background-color: #000;   /* black */
-  transition: background-color 0.3s ease;
-  cursor: pointer;
-}
-
-/* Hover effect */
-.square:hover {
-  background-color: #3a3a3a; /* lighter shade */
+  width: 20px;
+  height: 20px;
+  background-color: #000;   /* default black */
+  transition: background-color 0.5s ease; /* smooth transition */
 }
