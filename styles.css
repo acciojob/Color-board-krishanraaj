@@ -1,9 +1,13 @@
+body {
+  background-color: #212121;
+}
+
 /* Container grid */
 .container {
   display: grid;
   grid-template-columns: repeat(40, 25px);
   grid-template-rows: repeat(20, 25px);
-  gap: 2px;
+  gap: 1px;      /* smaller gap */
   width: 1020px;
   height: 520px;
   margin: 20px auto;
@@ -11,8 +15,14 @@
 
 /* Squares */
 .square {
-  width: 25px;
-  height: 25px;
-  background-color: rgb(29, 29, 29); /* Matches Cypress test */
+  width: 15px;
+  height: 15px;
+  background-color: #000;   /* black */
   transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover effect */
+.square:hover {
+  background-color: #3a3a3a; /* lighter shade */
 }
