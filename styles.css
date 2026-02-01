@@ -15,17 +15,17 @@ h1 {
 /* Grid container */
 .container {
   display: grid;
-  grid-template-columns: repeat(40, 20px); /* 40 columns */
-  grid-template-rows: repeat(20, 20px);    /* 20 rows = 800 squares */
+  grid-template-columns: repeat(40, 20px);
+  grid-template-rows: repeat(20, 20px);
   gap: 1px;
   width: 820px;
   height: 420px;
 }
 
-/* Grid squares */
+/* Squares */
 .square {
   width: 20px;
   height: 20px;
-  background-color: rgb(29, 29, 29); /* exact match for Cypress */
+  background-color: rgb(29, 29, 29); /* MUST match Cypress */
   transition: background-color 1s ease;
 }

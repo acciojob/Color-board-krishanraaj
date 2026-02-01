@@ -1,25 +1,7 @@
 const container = document.getElementById('board');
 const totalBoxes = 800;
 
-// Generate 800 squares
-for (let i = 0; i < totalBoxes; i++) {
-  const div = document.createElement('div');
-  div.classList.add('square');
-
-  // Hover effect: changes color temporarily
-  div.addEventListener('mouseenter', () => {
-    div.style.backgroundColor = getRandomColor();
-
-    // Reset to original color after 1s
-    setTimeout(() => {
-      div.style.backgroundColor = 'rgb(29, 29, 29)';
-    }, 1000);
-  });
-
-  container.appendChild(div);
-}
-
-// Random color generator
+// Function to generate random color
 function getRandomColor() {
   const letters = '0123456789ABCDEF';
   let color = '#';
@@ -27,4 +9,23 @@ function getRandomColor() {
     color += letters[Math.floor(Math.random() * 16)];
   }
   return color;
+}
+
+// Create 800 squares
+for (let i = 0; i < totalBoxes; i++) {
+  const div = document.createElement('div');
+  div.classList.add('square');
+
+  // Hover effect
+  div.addEventListener('mouseenter', () => {
+    const originalColor = 'rgb(29, 29, 29)';
+    div.style.backgroundColor = getRandomColor();
+
+    // Revert back to original color after 1 second
+    setTimeout(() => {
+      div.style.backgroundColor = originalColor;
+    }, 1000);
+  });
+
+  container.appendChild(div);
 }
