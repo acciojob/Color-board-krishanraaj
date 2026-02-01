@@ -1,25 +1,31 @@
 body {
   background-color: #212121;
   margin: 0;
+  font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: Arial, sans-serif;
+  color: #fff;
 }
 
+h1 {
+  margin: 20px 0;
+}
+
+/* Grid container */
 .container {
   display: grid;
-  grid-template-columns: repeat(40, 20px);
-  grid-template-rows: repeat(20, 20px);
+  grid-template-columns: repeat(40, 20px); /* 40 columns */
+  grid-template-rows: repeat(20, 20px);    /* 20 rows = 800 squares */
   gap: 1px;
   width: 820px;
   height: 420px;
-  margin-top: 20px;
 }
 
+/* Grid squares */
 .square {
   width: 20px;
   height: 20px;
-  background-color: rgb(29, 29, 29); /* match Cypress test */
-  transition: background-color 1s ease; /* smooth revert */
+  background-color: rgb(29, 29, 29); /* exact match for Cypress */
+  transition: background-color 1s ease;
 }
